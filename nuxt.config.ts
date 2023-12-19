@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    '@nuxt/ui', "nuxt-svgo", '@pinia/nuxt',
+    '@nuxt/ui', "nuxt-svgo", '@pinia/nuxt', '@vueuse/nuxt'
   ],
   ssr: false,
   css: ['~/assets/css/fonts.css'],
