@@ -4,13 +4,13 @@
 
 @layer base {
   * {
-    line-height: 100%;
+    @apply leading-[100%];
   }
   button {
-    line-height: 100%;
+    @apply leading-[100%];
   }
   .container {
-    /* max-width: 1760px !important; */
+    @apply !max-w-screen-4xl;
   }
   .no_scroll_bar::-webkit-scrollbar {
     width: 0;
@@ -32,7 +32,7 @@
   }
 
   body {
-    /* font-family: "Montserrat", sans-serif; */
+    /* @apply font-Primary; */
     /* background-color: #ffffff; */
   }
   .input_without_arrow::-webkit-outer-spin-button,
@@ -43,8 +43,7 @@
     -moz-appearance: textfield;
   }
   .container-reset {
-    padding: 0;
-    width: 100%;
-    max-width: none !important;
+    @apply p-0 w-full !max-w-none;
   }
 }
+
