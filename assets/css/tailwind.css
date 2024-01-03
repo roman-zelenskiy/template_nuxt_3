@@ -45,5 +45,10 @@
   .container-reset {
     @apply p-0 w-full !max-w-none;
   }
+
+  input[type='password'] {
+  font-family: sans-serif;
+}
+
 }
 
