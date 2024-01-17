@@ -1,0 +1,71 @@
+{
+  "overrides": [
+    // Configuration for TypeScript files
+    {
+      "files": ["**/*.ts", "**/*.vue"],
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "plugin:tailwindcss/recommended",
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "@nuxtjs/eslint-config-typescript",
+        "plugin:vue/vue3-recommended",
+        "plugin:prettier/recommended"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".vue"]
+      },
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "singleQuote": true,
+            "endOfLine": "lf"
+          }
+        ],
+        "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
+        "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
+        "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"], // Overrides Airbnb configuration and enable no-restricted-syntax
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-console": "off",
+        "vue/multi-word-component-names": "off",
+        "vue/component-tags-order": [
+          "error",
+          {
+            "order": ["script", "template", "style"]
+          }
+        ],
+        "vue/padding-line-between-blocks": ["error"],
+        "tailwindcss/no-custom-classname": [
+          "error",
+          {
+            "callees": ["clsx", "twMerge"],
+            "whitelist": ["^.*_.*$"] // Require custom classes to include underscores in their names
+          }
+        ],
+        "vue/attribute-hyphenation": "off",
+        "vue/html-self-closing": [
+          "error",
+          {
+            "html": {
+              "void": "always",
+              "normal": "always",
+              "component": "always"
+            },
+            "svg": "always",
+            "math": "always"
+          }
+        ],
+        "vue/v-on-event-hyphenation": "off",
+        "vue/no-mutating-props": "off",
+        "consistent-return": "off",
+        "vue/require-explicit-emits": "off",
+        "no-param-reassign": "off",
+        "import/prefer-default-export": "off",
+        "vue/no-use-v-if-with-v-for": "off"
+      }
+    }
+  ]
+}
