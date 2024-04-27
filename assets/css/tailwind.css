@@ -32,8 +32,7 @@
   }
 
   body {
-    /* @apply font-Primary; */
-    /* background-color: #ffffff; */
+    @apply font-primary;
   }
   .input_without_arrow::-webkit-outer-spin-button,
   .input_without_arrow::-webkit-inner-spin-button {
@@ -52,3 +51,8 @@
 
 }
 
+@layer components {
+  .button_opacity {
+    @apply duration-hover is-hover:hover:opacity-hover;
+  }
+}
