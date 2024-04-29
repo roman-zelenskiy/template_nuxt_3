@@ -33,6 +33,5 @@ export default defineNuxtConfig({
         },
       ],
     },
-    buildAssetsDir: 'assets',
   }
 })
