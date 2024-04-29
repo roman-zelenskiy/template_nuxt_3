@@ -36,9 +36,11 @@ export default <Partial<Config>> {
       },
       gridTemplateRows: {
       },
-      transitionDuration: {
-      },
       opacity: {
+        hover: '60%',
+      },
+      transitionDuration: {
+        hover: '200ms',
       },
       backgroundImage: {
       },
