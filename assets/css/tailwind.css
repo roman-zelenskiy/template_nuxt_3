@@ -52,7 +52,7 @@
 }
 
 @layer components {
-  .button_opacity {
+  .hover_opacity {
     @apply duration-hover is-hover:hover:opacity-hover;
   }
 }
