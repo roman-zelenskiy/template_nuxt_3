@@ -25,7 +25,6 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Temlate Nuxt 3',
       meta: [
         {
           name: 'viewport',
