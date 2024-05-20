@@ -1,4 +1,12 @@
 <script setup lang="ts">
+  type Props = {
+    fixedHeader?: boolean;
+  };
+
+  const props = withDefaults(defineProps<Props>(), {
+    fixedHeader: true,
+  });
+
   const header = ref();
   const isFixedHeader = ref(false);
   const headerHeight = computed(() => header.value.offsetHeight);
@@ -9,6 +17,9 @@
   };
 
   useEventScroll(() => {
+    if (!props.fixedHeader) {
+      return false;
+    }
     if (!isFixedHeader.value) {
       switchMobileMenu(false);
     }
